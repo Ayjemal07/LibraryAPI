@@ -8,7 +8,7 @@ api = Blueprint('api',__name__, url_prefix='/api')
 @token_required
 def create_book(current_user_token):
     isbn = request.json['isbn']
-    author_name = request.json['author_name']
+    author_name = request.json['author']
     title = request.json['title']
     genre = request.json['genre']
     user_token = current_user_token.token
