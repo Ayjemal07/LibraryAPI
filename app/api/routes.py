@@ -43,7 +43,7 @@ def get_single_book(current_user_token,id):
 def update_book(current_user_token,id):
     book = Book.query.get(id) 
     book.isbn = request.json['isbn']
-    book.author_name= request.json['author_name']
+    book.author_name= request.json['author']
     book.title = request.json['title']
     book.genre = request.json['genre']
     book.user_token = current_user_token.token
